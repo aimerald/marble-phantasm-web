@@ -6,7 +6,7 @@ $ ->
 	w = $(window)
 	h = w.height()
 	blur = $(".blur")
-	sces = 0.1
+	sces = 3
 	
 	be_blur = (sces) ->
 		blur.css({
@@ -21,6 +21,6 @@ $ ->
 			sces += 0.666
 		
 		if sc == 0
-			sces = 0.1
+			sces = 3
 		be_blur(sces)
 	)
