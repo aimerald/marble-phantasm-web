@@ -1,5 +1,4 @@
-
-:css
+<style>
   #main_container{
     width: 100%;
     height: auto;
@@ -10,13 +9,6 @@
   }
   #main_content{
     z-index: 180;
-  }
-  .windmill{
-    width: 12%;
-    height: 18%;
-    position: fixed;
-    bottom: 14%;
-    z-index: 6;
   }
   #the_world{
     position: fixed;
@@ -64,3 +56,55 @@
      background: -ms-linear-gradient(top, #2b29b3 1%, #083268 100%);
      background: linear-gradient(to bottom, #2b29b3 1%, #083268 100%);
   }
+  .windmill{
+    width: 18%;
+    height: 50%;
+    position: fixed;
+    bottom: 15%;
+    z-index: 6;
+  }
+  .windmill_relative{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .lod{
+    width: 66%;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 40%;
+    z-index: 8;
+  }
+  .wind{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 3.6%;
+    left: 23%;
+    z-index: 12;
+	}
+
+	/*乱数での実装は厳しいのであとで調整する*/
+   .rotate{
+    -moz-animation: rotate_controller 6s linear 10ms infinite forwards;
+    -webkit-animation: rotate_controller 6s linear 10ms infinite forwards;
+    -o-animation: rotate_controller 5s linear 20ms infinite forwards;
+    -ms-animation: rotate_controller 5s linear 20ms infinite forwards;
+   }
+
+   @-webkit-keyframes rotate_controller {
+    100% {-webkit-transform: rotate(-360deg);}
+   }
+   @-moz-keyframes rotate_controller {
+    100% {-moz-transform: rotate(-360deg);}
+   }
+   @-ms-keyframes rotate_controller {
+    100% {-ms-transform: rotate(-360deg);}
+   }
+   @-o-keyframes rotate_controller {
+    100% {-o-transform: rotate(-360deg);}
+	}
+
+	
+</style>

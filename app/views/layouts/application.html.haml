@@ -17,6 +17,6 @@
       = image_tag "mt.png",id: "mountain"
       
       - 4.times do |i|
-        = image_tag "windmill.png",class: "windmill", id: "windmill_#{i+1}"
-    
+        = render "layouts/windmill",i: i 
     = render "layouts/page_css"
+

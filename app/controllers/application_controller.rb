@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 	before_action :set_sky
 
 	def set_sky
-		@sky = "night_sky"
+		@sky = "sunset_sky"
 		h = Time.now.hour
 		logger.debug h
 		case h
