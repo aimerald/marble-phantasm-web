@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Seasons Call
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    %link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    = javascript_include_tag 'application'
+
+  %body.white-text.lato.thin
+    = render "layouts/header"
+    #main_container
+      .container#main_content
+        = yield
+    #the_world(class="#{@sky} blur")
+      = image_tag "mt.png",id: "mountain"
+      
+      - 4.times do |i|
+        = image_tag "windmill.png",class: "windmill", id: "windmill_#{i+1}"
+    
+    = render "layouts/page_css"
