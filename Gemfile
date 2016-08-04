@@ -54,4 +54,5 @@ end
 gem "haml-rails"
 gem 'materialize-sass'
 
-
+#認証
+gem 'sorcery'
