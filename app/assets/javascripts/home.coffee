@@ -20,21 +20,6 @@ $ ->
 			height: ws[1],
 			"z-index": 66
 		})
-		
-		for i in [2..4]
-			lef = 18
-			$("#windmill_#{i}").css({
-				left: "#{lef * i}%"
-			})
-			
-			#乱数での実装は厳しいのであとで修正する
-			$("#wind_#{i}").css({
-				"-o-transform": "rotate(#{Math.floor(Math.random() * 360)}deg)",
-				"-moz-transform": "rotate(#{Math.floor(Math.random() * 360)}deg)",
-				"-ms-transform": "rotate(#{Math.floor(Math.random() * 360)}deg)",
-				"-webkit-transform": "rotate(#{Math.floor(Math.random() * 360)}deg)"
-			})
-
 
 	for i in [0..120]
 		star_position_top = (Math.floor( Math.random() * ws[1]))
