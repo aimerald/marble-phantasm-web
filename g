@@ -2,4 +2,4 @@
 
 git add .
 git commit
-git push prigin master &
+git push origin master &
