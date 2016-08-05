@@ -56,3 +56,7 @@ gem 'materialize-sass'
 
 #認証
 gem 'sorcery'
+
+group :production do
+	gem "passenger"
+end
