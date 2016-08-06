@@ -1,0 +1,21 @@
+@import "materialize";
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400,300);
+
+//めちゃ細フォント
+.lato{
+  font-family: 'Lato', sans-serif;
+}
+
+#menu_posit{
+  margin-left: 18px;
+}
+.shadow{
+  text-shadow: 1px 1px 1px black;
+}
+
+.thin{
+  font-weight: 100;
+}
+.about_card{
+  margin-bottom: 66px;
+}
