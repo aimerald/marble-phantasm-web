@@ -1,0 +1,5 @@
+#!/bin/bash
+
+bundle
+passenger-install-apache2-module
+./d
