@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def set_sky
     @sky = "night_sky"
-    h = Time.now.hour
+    h = Time.now.hour + 9
     logger.debug h
     case h
       when 6..16
