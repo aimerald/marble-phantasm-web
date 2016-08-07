@@ -11,7 +11,7 @@
     = javascript_include_tag 'application'
 
   %body.white-text
-    = render "layouts/header"
+    = render "parts/header"
     #main_container
       .container#main_content
         = yield
@@ -21,4 +21,4 @@
       - 4.times do |i|
         = render "layouts/windmill",i: i 
     = render "layouts/page_css"
-    = render "layouts/notice"
+    = render "parts/notice"

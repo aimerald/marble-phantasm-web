@@ -1,0 +1,9 @@
+- ["ブログ","作品集"].each do |tag|
+  %li= link_to tag,:root,class: "thin waves-effect waves-light"
+%li= link_to "このサイトについて", about_index_path, class: "thin waves-effect waves-light"
+- if user_signed_in?
+  %li= link_to "管理画面へ",@current_user,class: "thin_300 waves-effect waves-light"
+  %li= link_to "ログアウト",sign_out_users_path,class: "thin waves-effect waves-light", method: :delete
+- else
+  %li= link_to "サインイン", sign_in_users_path, class: "thin waves-effect waves-light"
+  %li= link_to "サインアップ", sign_up_users_path, class: "thin waves-effect waves-light"

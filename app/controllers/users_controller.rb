@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
+	#管理画面のことである
+	def show
 
+	end
 
 	def sign_in
 		@blur = "blur"

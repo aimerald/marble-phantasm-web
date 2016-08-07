@@ -1,0 +1,8 @@
+%header.navbar-fixed
+  %nav.nav-wrapper
+    = link_to "Season's Call",:root,class: "brand-logo center white-text lato thin_300"
+    %a(href="#" data-activates="mobile-demo" class="button-collapse" id="menu_posit all_time_show")
+      %i.material-icons menu
+
+    %ul.side-nav#mobile-demo
+      = render "parts/header_menu" 

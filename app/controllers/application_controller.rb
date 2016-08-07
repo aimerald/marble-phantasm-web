@@ -24,6 +24,7 @@ class ApplicationController < ActionController::Base
 
 	def set_blur
 		@blur = ""
+		@blur_on_windmill = "blur"
 	end
 
 	def set_title
