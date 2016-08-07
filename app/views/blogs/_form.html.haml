@@ -15,8 +15,6 @@
   .field
     = f.label :image
     = f.text_field :image
-  .field
-    = f.label :user
-    = f.text_field :user
+    = f.text_field :user_id, value: 1
   .actions
     = f.submit 'Save'

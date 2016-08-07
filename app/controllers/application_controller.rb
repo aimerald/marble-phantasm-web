@@ -5,6 +5,22 @@ class ApplicationController < ActionController::Base
   before_action :set_sky
 	before_action :set_blur
 	before_action :set_title
+	before_action :get_current_user
+
+	def get_current_user
+		user_id = cookies[:current_user]
+		logger.debug "・ω・#{user_id}"
+		begin
+			@current_user = User.find(user_id)
+		rescue => e
+			logger.debug "[1199]::おかしなクッキーを使っているユーザーが居る"
+		end
+	end
+
+	#ログイン中かどうかを確認する
+	def user_signed_in?
+		@current_user.nil? ? false : true
+	end
 
 	def set_blur
 		@blur = ""
