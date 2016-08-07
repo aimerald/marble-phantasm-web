@@ -12,7 +12,6 @@ class UsersController < ApplicationController
 	def sign_in_process
 		data = params[:user]
 		if @user = login(data[:email], data[:password])
-			logger.debug @user.id
 			cookies[:current_user] = @user.id
 			redirect_to(:root, notice: "ログインに成功しました")
 		else
@@ -32,6 +31,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new user_params
 		if @user.save
+			cookies[:current_user] = @user.id
 			redirect_to :root,notice: "登録が完了しました"
 		else
 			flash[:now] = "ユーザーの登録に失敗しました"
