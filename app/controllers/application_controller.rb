@@ -7,6 +7,14 @@ class ApplicationController < ActionController::Base
 	before_action :set_title
 	before_action :get_current_user
 
+
+	#もしログインしていなければトップページにリダイレクト
+	def user_sign_in_status
+		unless user_signed_in?
+			redirect_to :root, notice: "ログインしている必要な項目があります。"
+		end
+	end
+
 	def get_current_user
 		user_id = cookies[:current_user]
 		logger.debug "・ω・#{user_id}"

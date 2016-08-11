@@ -6,15 +6,18 @@
         - @blog.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .input-field
     = f.label :title
     = f.text_field :title
-  .field
+  .input-field
     = f.label :body
     = f.text_area :body,class: "materialize-textarea"
-  .field
-    = f.label :image
-    = f.text_field :image
-    = f.text_field :user_id, value: @current_user.id
-  .actions
+  %div(class="file-field input-field")
+    .btn
+      %span File
+      = f.file_field :image
+  %br/
+  %br/
+  .input-field
+    = f.text_field :user_id, value: @current_user.id , type: "hidden"
     = f.submit 'Save',class: "btn btn-large blue"

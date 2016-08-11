@@ -60,3 +60,6 @@ gem 'sorcery'
 group :production do
 	gem "passenger"
 end
+
+#画像処理
+gem 'carrierwave'
