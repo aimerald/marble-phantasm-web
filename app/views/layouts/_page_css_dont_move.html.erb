@@ -299,10 +299,10 @@
 
 	/*乱数での実装は厳しいのであとで調整する*/
   .rotate{
-    -moz-animation: rotate_controller_1 6s linear 10ms infinite forwards;
-    -webkit-animation: rotate_controller_1 6s linear 10ms infinite forwards;
-    -o-animation: rotate_controller_1 5s linear 20ms infinite forwards;
-    -ms-animation: rotate_controller_1 5s linear 20ms infinite forwards;
+    -moz-animation: rotate_controller_1 60s linear 10ms infinite forwards;
+    -webkit-animation: rotate_controller_1 60s linear 10ms infinite forwards;
+    -o-animation: rotate_controller_1 50s linear 20ms infinite forwards;
+    -ms-animation: rotate_controller_1 50s linear 20ms infinite forwards;
    }
 
    @-webkit-keyframes rotate_controller_1 {
@@ -317,6 +317,5 @@
    @-o-keyframes rotate_controller {
     100% {-o-transform: rotate(-360deg);}
 	 }
-	 
 </style>
 <%= render("layouts/analytics")%>

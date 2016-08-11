@@ -1,15 +1,18 @@
-.card-panel.black-text.thin_300.lato
-  .container
-    %h2 新規ユーザー登録
-    = form_for @user do |f|
-      .input-field
-        = f.text_field :name
-        %label(name="name") なまえ　
-      .input-field
-        = f.email_field :email
-        %label(name="email") メールアドレス
-      .input-field
-        = f.password_field :password
-        %label(name="password") passwd
-      .input-field
-        = f.submit("create",class: "btn btn-large blue")
+
+#main_container
+  .container#main_content
+    .card-panel.black-text.thin_300.lato
+      .container
+        %h2 新規ユーザー登録
+        = form_for @user do |f|
+          .input-field
+            = f.text_field :name
+            %label(name="name") なまえ　
+          .input-field
+            = f.email_field :email
+            %label(name="email") メールアドレス
+          .input-field
+            = f.password_field :password
+            %label(name="password") passwd
+          .input-field
+            = f.submit("create",class: "btn btn-large blue")

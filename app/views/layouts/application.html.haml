@@ -12,13 +12,12 @@
 
   %body.white-text
     = render "parts/header"
-    #main_container
-      .container#main_content
-        = yield
-    #the_world(class="#{@sky} #{@blur}")
-      = image_tag "mt.png",id: "mountain",class: "blur"
-      
-      - 4.times do |i|
-        = render "layouts/windmill",i: i 
-    = render "layouts/page_css"
+    = yield
+    = render "parts/windmill"
+    
+    //風車さえ回っていないなら問題ない
+    -if request.fullpath == "/"
+      = render "layouts/page_css"
+    - else
+      = render "layouts/page_css_dont_move"
     = render "parts/notice"
