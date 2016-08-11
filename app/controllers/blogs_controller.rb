@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-	before_action :user_sign_in_status, only: [:show, :edit, :update, :destroy, :create,:new]
+	before_action :user_sign_in_status, only: [:edit, :update, :destroy, :create,:new]
 
   # GET /blogs
   # GET /blogs.json

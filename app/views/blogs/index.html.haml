@@ -1,27 +1,16 @@
-%h1 Listing blogs
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th Image
-      %th User
-      %th
-      %th
-      %th
-
-  %tbody
-    - @blogs.each do |blog|
-      %tr
-        %td= blog.title
-        %td= blog.body
-        %td= blog.image
-        %td= blog.user
-        %td= link_to 'Show', blog
-        %td= link_to 'Edit', edit_blog_path(blog)
-        %td= link_to 'Destroy', blog, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Blog', new_blog_path
+#main_container
+  .container#main_content
+    .card-panel.black-text.thin_300
+      %h1 Listing blogs
+      
+      %table
+        %thead
+          %tr
+            %th Title
+            %th Body
+      
+        %tbody
+          - @blogs.each do |blog|
+            %tr
+              %td= link_to blog.title,blog
+              %td= truncate(blog.body)

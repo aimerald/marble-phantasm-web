@@ -1,5 +1,6 @@
-- ["ブログ","作品集"].each do |tag|
+- ["作品集"].each do |tag|
   %li= link_to tag,:root,class: "thin waves-effect waves-light"
+%li= link_to "ブログ", blogs_path, class: "thin waves-effect waves-light"
 %li= link_to "このサイトについて", about_index_path, class: "thin waves-effect waves-light"
 - if user_signed_in?
   %li= link_to "管理画面へ",@current_user,class: "thin_300 waves-effect waves-light"
