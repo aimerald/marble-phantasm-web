@@ -12,11 +12,9 @@
         = simple_format @blog.body
       %p
         %b Image:
-        = image_tag @blog.image,class: "responsive-img"
+        = image_tag @blog.image.thumb,class: "responsive-img"
       %p
         %b User:
         = @blog.user.name
       
-      = link_to 'Edit', edit_blog_path(@blog)
-      \|
       = link_to 'Back', blogs_path
