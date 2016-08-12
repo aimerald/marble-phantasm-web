@@ -12,7 +12,7 @@
         = simple_format @blog.body
       %p
         %b Image:
-        = image_tag @blog.image.url,class: "responsive-img"
+        = image_tag @blog.image,class: "responsive-img"
       %p
         %b User:
         = @blog.user.name
