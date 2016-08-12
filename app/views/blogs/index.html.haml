@@ -1,16 +1,17 @@
 #main_container
   .container#main_content
     .card-panel.black-text.thin_300
-      %h1 Listing blogs
-      
+      %h4 記事の一覧
       %table
         %thead
           %tr
-            %th Title
-            %th Body
+            %th 日付
+            %th サムネ
+            %th タイトル
       
         %tbody
           - @blogs.each do |blog|
             %tr
+              %td= link_to blog.created_at.strftime("%Y/%m/%d"), blog
+              %td= image_tag (blog.image.thumb.blank? ? "bear_ice.png":blog.image.thumb),class: "responsive-img",width: 66
               %td= link_to blog.title,blog
-              %td= truncate(blog.body)

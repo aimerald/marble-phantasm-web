@@ -52,15 +52,18 @@ group :test do
 	gem "rspec-rails"
 end
 
-gem "haml-rails"
-gem 'materialize-sass'
-
-#認証
-gem 'sorcery'
-
+#本番環境
 group :production do
 	gem "passenger"
 end
+
+#デザイン系
+gem "haml-rails"
+gem 'materialize-sass'
+gem "kaminari"
+
+#認証
+gem 'sorcery'
 
 #画像処理
 gem 'carrierwave'
