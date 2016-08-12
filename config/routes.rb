@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users do
 		collection do
 			get :sign_in
-			get :sign_up
+			#get :sign_up
 			
 			post :sign_in_process
 			
