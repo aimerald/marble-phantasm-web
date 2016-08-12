@@ -15,11 +15,11 @@ $ ->
 			"filter": "blur(#{sces}px)"
 		})
 	
+
 	w.scroll(->
 		sc = $(@).scrollTop()
 		if sc < 66 && sces < 10
 			sces += 0.666
-		
 		if sc == 0
 			sces = 3
 		be_blur(sces)
