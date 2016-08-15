@@ -1,14 +1,15 @@
+# coding: utf-8
 class UsersController < ApplicationController
 
-	#管理画面のことである
-	def show
+  #管理画面のことである
+  def show
 
-	end
-
-	def sign_in
-		@blur = "blur"
   end
-	
+
+  def sign_in
+    @blur = "blur"
+  end
+  
 	def sign_in_process
 		data = params[:user]
 		if @user = login(data[:email], data[:password])

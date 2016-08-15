@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 	before_action :set_blur
 	before_action :set_title
 	before_action :get_current_user
+	before_action :set_astro
 
 
 	#もしログインしていなければトップページにリダイレクト
@@ -41,7 +42,7 @@ class ApplicationController < ActionController::Base
 
   def set_sky
     @sky = "night_sky"
-    h = Time.now.hour + 9
+    h = Time.now.hour
     logger.debug h
     case h
       when 6..16
@@ -53,5 +54,16 @@ class ApplicationController < ActionController::Base
         @sky = "night_sky"
     end
   end
-
+	
+	def set_astro
+    h = Time.now.hour
+    case h
+      when 6..16
+        @astro = "sun"
+      when 17 .. 19
+        @astro = "sun"
+      when 20 .. 5
+				@astro = "moon"
+		end
+	end
 end
