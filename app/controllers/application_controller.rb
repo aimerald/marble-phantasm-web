@@ -1,3 +1,4 @@
+# coding: utf-8
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -22,6 +23,7 @@ class ApplicationController < ActionController::Base
 		begin
 			@current_user = User.find(user_id)
 		rescue => e
+      puts e
 			logger.debug "[1199]::おかしなクッキーを使っているユーザーが居る"
 		end
 	end
@@ -57,13 +59,10 @@ class ApplicationController < ActionController::Base
 	
 	def set_astro
     h = Time.now.hour + 9
-    case h
-      when 6..16
-        @astro = "sun"
-      when 17 .. 19
-        @astro = "sun"
-      when 20 .. 5
-				@astro = "moon"
-		end
+    if 0 < h && h < 19
+      @astro = "sun"
+    else
+      @astro = "moon"
+    end
 	end
 end

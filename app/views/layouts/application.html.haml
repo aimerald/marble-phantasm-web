@@ -3,16 +3,20 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta(content="width=device-width, initial-scale=1.0 user-scalable=no" name="viewport")
+
     %title= @title
 
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     %link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     = javascript_include_tag 'application'
-
+    
   %body.white-text
     = render "parts/header"
+
     = yield
+    
+    /これが風車のコード本体
     = render "parts/windmill"
     
     //風車さえ回っていないなら問題ない
