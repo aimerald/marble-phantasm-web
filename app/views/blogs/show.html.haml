@@ -1,20 +1,17 @@
-
 #main_container
   .container#main_content
     .card-panel.black-text.thin_300
-      %p#notice= notice
+      .center
+        = image_tag @blog.image, width: 120,class: "circle"
+      %h4.center= @blog.title
+      %p= simple_format @blog.body
+
+      = image_tag @blog.image.thumb,class: "responsive-img"
+
+      .right-align
+        %span.font_size_14= @blog.created_at.strftime("%Y-%m-%d")
       
-      %p
-        %b Title:
-        = @blog.title
-      %p
-        %b Body:
-        = simple_format @blog.body
-      %p
-        %b Image:
-        = image_tag @blog.image.thumb,class: "responsive-img"
-      %p
-        %b User:
-        = @blog.user.name
-      
-      = link_to 'Back', blogs_path
+    = link_to "一覧に戻る", blogs_path
+
+    - if user_signed_in?
+      = link_to "記事を編集する", edit_blog_path(@blog), class: "right teal-text"

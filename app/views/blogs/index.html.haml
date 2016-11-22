@@ -1,19 +1,18 @@
 #main_container
-  .container#main_content
-    .card-panel.black-text.thin_300
-      %h4 記事の一覧
-      %table
-        %thead
-          %tr
-            %th 日付
-            %th サムネ
-            %th タイトル
-      
-        %tbody
-          - @blogs.each do |blog|
-            %tr
-              %td= link_to blog.created_at.strftime("%Y/%m/%d"), blog
-              %td= image_tag (blog.image.thumb.blank? ? "bear_ice.png":blog.image.thumb),class: "responsive-img",width: 66
-              %td= link_to blog.title,blog
-      .center-align
-        = paginate @blogs
+  .containers#main_content
+    .center
+      %h4.indigo-text.thin Blog.all
+    .row
+      - @blogs.each do |blog|
+        .col.l3.s12.m4.waves-effect.waves-light
+          = link_to blog do
+            .card
+              .card-image
+                = image_tag blog.image
+              .card-content
+                %span.card-title.indigo-text= blog.title
+                .right-align
+                  %span.font_size_12.thin_300.black-text= blog.created_at.strftime("%Y-%m-%d")
+              .card-action
+                = link_to "詳しく読む",blog
+                      

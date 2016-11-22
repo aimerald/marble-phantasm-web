@@ -1,7 +1,8 @@
-%h1 Editing blog
+.container
+  %h1.thin_300.center.teal-text Editing blog
 
-= render 'form'
-
-= link_to 'Show', @blog
-\|
-= link_to 'Back', blogs_path
+  .card-panel
+    = render 'form'
+    
+  = link_to "記事を確認", @blog
+  = link_to "戻る", blogs_path,class: "right"

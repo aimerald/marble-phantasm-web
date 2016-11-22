@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
 		page = params[:page].nil? ? 0 : params[:page]
-    @blogs = Blog.all.page(page)
+    @blogs = Blog.order("created_at desc").page(page)
   end
 
   # GET /blogs/1
