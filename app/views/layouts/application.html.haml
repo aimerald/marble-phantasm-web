@@ -15,9 +15,10 @@
     = render "parts/header"
 
     = yield
-    
-    /これが風車のコード本体
-    = render "parts/windmill"
+
+    - if !request.fullpath.match(/\/users\/[0-9]/)
+      /これが風車のコード本体
+      = render "parts/windmill"
     
     //風車さえ回っていないなら問題ない
     -if request.fullpath == "/"

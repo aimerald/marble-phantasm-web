@@ -1,5 +1,14 @@
-
-#main_container
+#main_container.grey.lighten-4
   .container#main_content
-    .card-panel
-      = link_to "Blogを書く",new_blog_path
+    .row
+      .col.s12.m4
+        .card
+          .card-image.center
+            %i.material-icons.orange-text.large edit
+          .card-action
+            = link_to "Blogを書く",new_blog_path
+
+
+
+
+
