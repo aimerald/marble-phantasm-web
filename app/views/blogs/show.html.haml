@@ -2,7 +2,7 @@
   .container#main_content
     .card-panel.black-text.thin_300
       .center
-        = image_tag @blog.image, width: 120,class: "circle"
+        = image_tag @blog.image.thumb.url, width: 120,class: "circle"
       %h4.center= @blog.title
       %p= simple_format @blog.body
 
