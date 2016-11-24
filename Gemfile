@@ -63,6 +63,8 @@ gem "haml-rails"
 gem 'materialize-sass'
 gem "kaminari"
 
+gem "redcarpet"
+
 #認証
 gem 'sorcery'
 

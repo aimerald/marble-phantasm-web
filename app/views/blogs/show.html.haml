@@ -4,7 +4,7 @@
       .center
         = image_tag @blog.image.thumb.url, width: 120,class: "circle"
       %h4.center= @blog.title
-      %p= simple_format @blog.body
+      %p= markdown(@blog.body)
 
       = image_tag @blog.image.thumb,class: "responsive-img"
 
