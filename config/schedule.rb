@@ -22,6 +22,6 @@ every 66.days do
   command "sudo $HOME/certbot-auto renew"
 end
 
-every 10.seconds do
+every 1.minutes do
   command "echo hello world"
 end
