@@ -18,3 +18,10 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+every 66.month do
+  command "sudo $HOME/certbot-auto renew"
+end
+
+every 10.seconds do
+  command "echo hello world"
+end
