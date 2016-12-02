@@ -18,7 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 66.month do
+every 66.days do
   command "sudo $HOME/certbot-auto renew"
 end
 
