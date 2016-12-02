@@ -71,3 +71,6 @@ gem 'sorcery'
 #画像処理
 gem 'carrierwave'
 gem "rmagick"
+
+# 便利ツール
+gem "whenever"
