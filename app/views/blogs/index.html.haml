@@ -15,4 +15,11 @@
                   %span.font_size_12.thin_300.black-text= blog.created_at.strftime("%Y-%m-%d")
               .card-action
                 = link_to "詳しく読む",blog
-                      
+
+
+
+- if user_signed_in?
+  .fixed-action-btn
+    /%a.btn-floating.btn-large.blue.darken-3()
+    = link_to new_blog_path, class: "btn-floating btn-large blue darken-3" do
+      %i.material-icons edit
