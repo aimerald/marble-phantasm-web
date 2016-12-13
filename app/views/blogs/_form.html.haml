@@ -5,13 +5,17 @@
       %ul
         - @blog.errors.full_messages.each do |msg|
           %li= msg
-
+  
   .input-field
-    = f.label :title
+    = f.label :title,"タイトル"
     = f.text_field :title
   .input-field
-    = f.label :body
+    = f.label :tags, "タグ"
+    = f.text_field :tags
+  .input-field
+    = f.label :body,"本文"
     = f.text_area :body,class: "materialize-textarea"
+    
   %div(class="file-field input-field")
     .btn
       %span File

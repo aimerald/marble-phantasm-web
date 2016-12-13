@@ -4,6 +4,11 @@
       .center
         = image_tag @blog.image.thumb.url, width: 120,class: "circle"
       %h4.center= @blog.title
+      - unless @blog.tags.blank?
+        .center
+          - @blog.tags.split(",").each do |tag|
+            .chip.cyan.white-text
+              = tag
       %p= simple_format(markdown(@blog.body))
 
       = image_tag @blog.image.thumb,class: "responsive-img"
