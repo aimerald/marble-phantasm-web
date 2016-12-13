@@ -8,14 +8,13 @@
           = link_to blog do
             .card
               .card-image
-                = image_tag blog.image.thumb.url
+                = image_tag blog.image.thumb.url, height: 180
               .card-content
                 %span.card-title.indigo-text= blog.title
                 .right-align
                   %span.font_size_12.thin_300.black-text= blog.created_at.strftime("%Y-%m-%d")
               .card-action
                 = link_to "詳しく読む",blog
-
 
 
 - if user_signed_in?
