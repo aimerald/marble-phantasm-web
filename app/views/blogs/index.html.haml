@@ -8,9 +8,9 @@
           = link_to blog do
             .card
               .card-image
-                = image_tag blog.image.thumb.url, height: 180
+                = image_tag blog.image.thumb.url
               .card-content
-                %span.card-title.indigo-text= blog.title
+                %span.card-title.indigo-text= truncate(blog.title,length: 8)
                 .right-align
                   %span.font_size_12.thin_300.black-text= blog.created_at.strftime("%Y-%m-%d")
               .card-action
