@@ -5,16 +5,23 @@
     .row
       - @blogs.each do |blog|
         .col.l3.s12.m4.waves-effect.waves-light
-          = link_to blog do
-            .card
-              .card-image
+          .card
+            .card-image
+              = link_to blog do
                 = image_tag blog.image.thumb.url
-              .card-content
-                %span.card-title.indigo-text= truncate(blog.title,length: 8)
-                .right-align
-                  %span.font_size_12.thin_300.black-text= blog.created_at.strftime("%Y-%m-%d")
-              .card-action
-                = link_to "詳しく読む",blog
+            .card-content
+              = link_to blog do
+                %h6.card-title.indigo-text= truncate(blog.title,length: 8)
+                
+              - unless blog.tags.blank?
+                - blog.tags.split(",").each do |tag|
+                  .chip.cyan.white-text.waves-effect.waves-light
+                    = tag
+              .right-align
+                %span.font_size_12.thin_300.black-text= blog.created_at.strftime("%Y-%m-%d")
+              
+            .card-action
+              = link_to "詳しく読む",blog
 
 
 - if user_signed_in?
