@@ -1,0 +1,23 @@
+%h1 Listing searches
+
+%table
+  %thead
+    %tr
+      %th Q
+      %th Ip addr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @searches.each do |search|
+      %tr
+        %td= search.q
+        %td= search.ip_addr
+        %td= link_to 'Show', search
+        %td= link_to 'Edit', edit_search_path(search)
+        %td= link_to 'Destroy', search, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Search', new_search_path

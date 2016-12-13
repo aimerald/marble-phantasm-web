@@ -1,0 +1,8 @@
+.container
+  = form_for @search do |f|
+    .container
+      .center
+        %h5.thin Search here!
+      .input-field
+        = f.label :q,"Search",class: "thin"
+        = f.text_field :q, id: "search_word"
