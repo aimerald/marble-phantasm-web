@@ -25,20 +25,26 @@ services:
       - '3306'
     volumes:
       - ./admin_mysql:/var/lib/mysql
-  app:
+  api_server:
     extends:
       file: api_server/docker-compose.yml
-      service: app
-    container_name: app
+      service: api_server
+    container_name: api_server
     depends_on:
       - db
 
   admin_tool:
     image: admin_tool
-    build: ./Dockerfile.admin_tool
+    build: .
     ports:
       - '3001:3000'
     container_name: admin_tool
     depends_on:
       - db
       - admin-tool-db
+    environment:
+      API_SERVER_DATABASE_URL: mysql2://root:root_pass@db/app
+      ADMIN_TOOL_DATABASE_URL: mysql2://root:root_pass@admin-tool-db/app
+      SECRET_KEY_BASE: dfd2fa2cd728f350195376997229ef2ae220ae761f7c87a3ba515cf8d04beba7c5878fe7f6365259c8e071b40883c7967e63be3a9411f88ce89ffed927fe6396
+    volumes:
+      - .:/admin_tool
