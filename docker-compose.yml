@@ -32,10 +32,12 @@ services:
     container_name: app
     depends_on:
       - db
+
   admin_tool:
-    extends:
-      file: admin_tool/docker-compose.yml
-      service: admin_tool
+    image: admin_tool
+    build: ./Dockerfile.admin_tool
+    ports:
+      - '3001:3000'
     container_name: admin_tool
     depends_on:
       - db
