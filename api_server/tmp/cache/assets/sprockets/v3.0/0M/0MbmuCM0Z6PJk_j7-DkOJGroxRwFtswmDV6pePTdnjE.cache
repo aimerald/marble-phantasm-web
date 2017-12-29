@@ -1,0 +1,7 @@
+I"f(function() {
+  $(function() {
+    return $(".button-collapse").sideNav();
+  });
+
+}).call(this);
+:ET

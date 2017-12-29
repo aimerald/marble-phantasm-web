@@ -1,0 +1,15 @@
+I"(function() {
+  $(function() {
+    var snow_fall;
+    $(".button-collapse").sideNav();
+    return snow_fall = function() {
+      return $(document).snowfall({
+        flakeCount: 666,
+        minSize: 6,
+        maxSize: 18
+      });
+    };
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,12 @@
+I"Ð(function() {
+  $(function() {
+    var snow_fall;
+    $(".button-collapse").sideNav();
+    snow_fall = function() {
+      return $(document).snowfall({});
+    };
+    return snow_fall();
+  });
+
+}).call(this);
+:ET
