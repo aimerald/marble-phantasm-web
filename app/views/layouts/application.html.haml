@@ -10,15 +10,8 @@
     = stylesheet_link_tag    'application', media: 'all'
     %link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     = javascript_include_tag 'application'
-    
+
   %body.grey-text
-    //風車さえ回っていないなら問題ない
-    -if request.fullpath == "/"
-      = render "parts/header"
-      = render "parts/windmill"
-      = render "layouts/page_css"
-    - else
-      = render "layouts/page_css_dont_move"
-      = render "parts/header2"
-    = yield      
+    = render "parts/header"
+    = yield
     = render "parts/notice"
