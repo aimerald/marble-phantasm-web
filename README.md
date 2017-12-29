@@ -1,24 +1,31 @@
-# README
+# README.md
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## いい感じのブログ作った
 
-Things you may want to cover:
+![this is my soul world](./public/images/top.png)
 
-* Ruby version
+和歌山な感じで叙情的で優しい感じのホームページを作りたった
 
-* System dependencies
+元ネタは2013年に自作したホームページ
 
-* Configuration
+失われたコードを書き直した感じ
 
-* Database creation
+## 使い方
 
-* Database initialization
+主にDocker化してるので
 
-* How to run the test suite
+```
+docker-compose up --build -d
+docker-compose exec app rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+で動く
 
-* Deployment instructions
 
-* ...
+## やばい
+
+多分テスト書いてない
+
+ビュー主体すぎて書いたなかった
+
+悪かったと思ってる
