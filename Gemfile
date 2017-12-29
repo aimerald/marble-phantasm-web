@@ -53,6 +53,8 @@ group :test do
 	gem "rspec-rails"
 end
 
+gem "mysql2"
+
 #デザイン系
 gem "haml-rails"
 gem 'materialize-sass'
