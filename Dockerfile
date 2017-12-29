@@ -15,7 +15,7 @@ RUN bundle install -j4
 
 COPY admin_tool $APP_ROOT
 
-EXPOSE 3001
+EXPOSE 3000
 
 ENTRYPOINT ["bundle", "exec"]
-CMD ["rails", "server", "-p", "3001", "-b", "0.0.0.0", "--pid", "/tmp/server.pid"]
+CMD ["rails", "server", "-p", "3000", "-b", "0.0.0.0", "--pid", "/tmp/server.pid"]
