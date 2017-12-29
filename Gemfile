@@ -53,11 +53,6 @@ group :test do
 	gem "rspec-rails"
 end
 
-#本番環境
-group :production do
-	gem "passenger"
-end
-
 #デザイン系
 gem "haml-rails"
 gem 'materialize-sass'
