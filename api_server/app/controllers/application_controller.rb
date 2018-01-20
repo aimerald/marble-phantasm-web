@@ -2,13 +2,17 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception  
+  protect_from_forgery with: :exception
   before_action :set_sky
 	before_action :set_blur
 	before_action :set_title
 	before_action :get_current_user
 	before_action :set_astro
+  before_action :set_title
 
+  def set_title
+    @title = 'marble-phantasm'
+  end
 
 	#もしログインしていなければトップページにリダイレクト
 	def user_sign_in_status
@@ -56,7 +60,7 @@ class ApplicationController < ActionController::Base
         @sky = "night_sky"
     end
   end
-	
+
 	def set_astro
     h = Time.now.hour + 9
     if 0 < h && h < 19
