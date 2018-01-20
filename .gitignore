@@ -11,11 +11,17 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
-# Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+# API_SERVER Ignore all logfiles and tempfiles.
+/api_server/log/*
+/api_server/tmp/*
+!/api_server/log/.keep
+!/api_server/tmp/.keep
+
+# ADMIN_TOOL Ignore all logfiles and tempfiles.
+/admin_tool/log/*
+/admin_tool/tmp/*
+!/admin_tool/log/.keep
+!/admin_tool/tmp/.keep
 
 # Ignore Byebug command history file.
 .byebug_history
