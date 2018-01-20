@@ -9,9 +9,11 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
+api_database:
+  url: <%= ENV['API_SERVER_DATABASE_URL'] %>
+
 development:
-  <<: *default
-  database: db/development.sqlite3
+  url: <%= ENV['ADMIN_TOOL_DATABASE_URL'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
