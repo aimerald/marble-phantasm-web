@@ -1,13 +1,13 @@
-# coding: utf-8
+
 class SearchesController < ApplicationController
-  before_action :set_search, only: [:show, :edit, :update, :destroy]
+  before_action :set_search, only: %i[show edit update destroy]
 
   def result
-    logger.debug("・ω・")
+    logger.debug('・ω・')
     q = params[:q]
     render json: q.to_json
   end
-  
+
   # GET /searches
   # GET /searches.json
   def index
@@ -17,8 +17,7 @@ class SearchesController < ApplicationController
 
   # GET /searches/1
   # GET /searches/1.json
-  def show
-  end
+  def show; end
 
   # GET /searches/new
   def new
@@ -26,8 +25,7 @@ class SearchesController < ApplicationController
   end
 
   # GET /searches/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /searches
   # POST /searches.json
@@ -70,13 +68,14 @@ class SearchesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_search
-      @search = Search.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def search_params
-      params.require(:search).permit(:q, :ip_addr)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_search
+    @search = Search.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def search_params
+    params.require(:search).permit(:q, :ip_addr)
+  end
 end

@@ -1,5 +1,5 @@
 class AboutController < ApplicationController
   def index
-		@blur = "blur"
+    @blur = 'blur'
   end
 end
