@@ -8,11 +8,7 @@ class ApplicationController < ActionController::Base
   before_action :set_title
   before_action :get_current_user
   before_action :set_astro
-  before_action :set_title
-
-  def set_title
-    @title = 'marble-phantasm'
-  end
+  before_action :set_header_title
 
   # もしログインしていなければトップページにリダイレクト
   def user_sign_in_status
@@ -41,7 +37,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_title
-    @title = "Season'sCall:::ハッカーを目指す青年のポートフォリオ"
+    @title = 'Marble Phantasm 優しい世界'
+  end
+
+  def set_header_title
+    @title = 'Marble Phantasm'
   end
 
   def set_sky
