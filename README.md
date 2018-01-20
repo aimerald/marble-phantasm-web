@@ -2,7 +2,7 @@
 
 ## いい感じのブログ作った
 
-![this is my soul world](./public/images/top.png)
+![this is my soul world](./api_server/public/images/top.png)
 
 和歌山な感じで叙情的で優しい感じのホームページを作りたった
 
@@ -22,10 +22,17 @@ docker-compose exec app rails db:migrate
 で動く
 
 
-## やばい
+##　これから
+管理ツールを導入したのでブログとかのコンテンツ管理はそっちでやる
 
-多分テスト書いてない
+APIサーバーもAngular2とAPIとで役割を分けたい
 
-ビュー主体すぎて書いたなかった
+## やること
 
-悪かったと思ってる
+* [ ] Angular2の導入
+
+* [ ] https化する(Docker containerでね)
+
+* [ ] ブログやろうぜブログ！
+
+* [ ] いいからAngularだ！
