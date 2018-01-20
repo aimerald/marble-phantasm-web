@@ -1,0 +1,38 @@
+I"'(function() {
+  $(function() {
+    var header, i, j, mcwh, ms, puts, set_windmill, star_position_left, star_position_top, w, world, ws;
+    puts = function(s) {
+      return console.log(s);
+    };
+    w = $(window);
+    ws = [w.width(), w.height()];
+    world = $("#the_world");
+    ms = $("#main_content");
+    mcwh = [ms.width(), ms.height()];
+    header = $("nav");
+    header.css({
+      background: "none"
+    });
+    set_windmill = function(ws) {
+      return world.css({
+        width: ws[0],
+        height: ws[1] * 0.666,
+        "z-index": 66
+      });
+    };
+    for (i = j = 0; j <= 120; i = ++j) {
+      star_position_top = Math.floor(Math.random() * ws[1]);
+      star_position_left = Math.floor(Math.random() * ws[0]);
+      world.append("<div class='star' style='top: " + star_position_top + "px; left: " + star_position_left + "px;'></div>");
+    }
+    set_windmill(ws);
+    return w.resize(function() {
+      var rw, rws;
+      rw = $(window);
+      rws = [rw.width(), rw.height()];
+      return set_windmill(rws);
+    });
+  });
+
+}).call(this);
+:ET

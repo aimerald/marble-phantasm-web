@@ -1,0 +1,8 @@
+I"}(function() {
+  $(function() {
+    $(".button-collapse").sideNav();
+    return $(document).snowfall();
+  });
+
+}).call(this);
+:ET

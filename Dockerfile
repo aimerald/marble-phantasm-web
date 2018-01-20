@@ -7,13 +7,13 @@ WORKDIR $APP_ROOT
 RUN apt-get update\
 		&& apt-get install -y nodejs
 
-COPY Gemfile Gemfile
-COPY Gemfile.lock Gemfile.lock
+COPY admin_tool/Gemfile Gemfile
+COPY admin_tool/Gemfile.lock Gemfile.lock
+COPY api_server/app/models app/models
 
 RUN bundle install -j4
 
-COPY . $APP_ROOT
-
+COPY admin_tool $APP_ROOT
 
 EXPOSE 3000
 

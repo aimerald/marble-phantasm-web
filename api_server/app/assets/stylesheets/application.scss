@@ -1,0 +1,59 @@
+@import "materialize";
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400,300);
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+.family_select {
+		font-family: 'Dancing Script', cursive;
+}
+
+//めちゃ細フォント
+.lato{
+  font-family: 'Lato', sans-serif;
+}
+
+.get_right{
+  margin-right: 18px;
+}
+
+
+#menu_posit{
+  margin-left: 18px;
+}
+.shadow{
+  text-shadow: 1px 1px 1px black;
+}
+
+.thin{
+  font-weight: 100;
+}
+.thin_300{
+  font-weight: 300;
+}
+.about_card{
+  margin-bottom: 66px;
+}
+
+nav a.button-collapse{
+  display: block;
+  margin-left: 18px;
+}
+
+.astro{
+  width: 66px;
+  height: 66px;
+  border-radius: 33px;
+  position: absolute;
+  top: 18%;
+  left: 18%;
+  z-index: 99;
+  box-shadow: 0px 0px 18px white;
+}
+
+.sun{
+  background: #f3f3aa;
+}
+
+
+.moon{
+  background: yellow;
+}

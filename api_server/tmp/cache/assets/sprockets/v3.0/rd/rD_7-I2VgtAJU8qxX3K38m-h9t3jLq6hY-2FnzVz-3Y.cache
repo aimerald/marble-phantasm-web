@@ -1,0 +1,20 @@
+I"o(function() {
+  $(function() {
+    var field, puts;
+    puts = function(s) {
+      return console.log(s);
+    };
+    field = $("#search_word");
+    return field.keyup(function(e) {
+      var q;
+      q = $(this).val();
+      return $.post("/searches/result", {
+        q: q
+      }, function(data) {
+        return puts(data);
+      });
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,14 @@
+I"õ(function() {
+  $(function() {
+    var field, puts;
+    puts = function(s) {
+      return console.log(s);
+    };
+    field = $("#search_word");
+    return field.keyup(function(e) {
+      return puts($(this).val());
+    });
+  });
+
+}).call(this);
+:ET

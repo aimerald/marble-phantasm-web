@@ -1,0 +1,32 @@
+I"œ(function() {
+  $(function() {
+    var be_blur, blur, h, puts, sces, w;
+    puts = function(s) {
+      return console.log(s);
+    };
+    w = $(window);
+    h = w.height();
+    blur = $(".blur");
+    sces = 3;
+    be_blur = function(sces) {
+      return blur.css({
+        "-webkit-filter": "blur(" + sces + "px)",
+        "-ms-filter": "blur(" + sces + "px)",
+        "filter": "blur(" + sces + "px)"
+      });
+    };
+    return w.scroll(function() {
+      var sc;
+      sc = $(this).scrollTop();
+      if (sc < 66 && sces < 10) {
+        sces += 0.666;
+      }
+      if (sc === 0) {
+        sces = 3;
+      }
+      return be_blur(sces);
+    });
+  });
+
+}).call(this);
+:ET
