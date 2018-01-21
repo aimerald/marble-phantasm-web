@@ -31,7 +31,7 @@ APIサーバーもAngular2とAPIとで役割を分けたい
 
 * [ ] Angular2の導入
 
-* [ ] https化する(Docker containerでね)
+* [x] https化する(Docker containerでね)
 
 * [ ] ブログやろうぜブログ！
 
