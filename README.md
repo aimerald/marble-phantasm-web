@@ -2,7 +2,7 @@
 
 ## いい感じのブログ作った
 
-![this is my soul world](./api_server/public/images/top.png)
+![this is my soul world](./images/top.png)
 
 和歌山な感じで叙情的で優しい感じのホームページを作りたった
 
