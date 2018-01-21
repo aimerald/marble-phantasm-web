@@ -22,7 +22,7 @@ docker-compose exec app rails db:migrate
 で動く
 
 
-##　これから
+## これから
 管理ツールを導入したのでブログとかのコンテンツ管理はそっちでやる
 
 APIサーバーもAngular2とAPIとで役割を分けたい
